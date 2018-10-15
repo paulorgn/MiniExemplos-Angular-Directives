@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ScreenService } from './screen.service';
+import { ScreenService } from './services/screen.service';
 
 @Component({
   selector: 'app-root',

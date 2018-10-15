@@ -1,9 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div *ngIf="screenService.isLarge()">
+<div *screenLarge>
   Componente Otimizado para Desktop
   <img class="imagemDesktop" src="assets/computer-guy.jpg">
 </div>
-<div *ngIf="!screenService.isLarge()">
+<div *screenBelowLarge>
   Componente Otimizado para Mobile
   <img class="imagemMobile" src="assets/ecommerce-application-buy-card.jpg">
 </div>
