@@ -18,8 +18,7 @@ export class ScreenBelowLarge implements OnDestroy {
 
   @Input()
   set screenBelowLarge(condition) {
-    // ignore the passed condition and set it based on screen size
-    condition = this.screenService.screenWidth < this.screenService.larguraLimite;
+    condition = this.screenService.screenWidth < this.screenService.larguraLimite && this.screenService.screenHeight < this.screenService.alturaLimite;
     
     if (condition && !this.hasView) {
       this.hasView = true;
@@ -35,7 +34,6 @@ export class ScreenBelowLarge implements OnDestroy {
   }
 
   onResize() {
-    // trigger the setter
     this.screenBelowLarge = false;
   }
 }
